@@ -1,30 +1,25 @@
-const logo = document.querySelectorAll('#logo__hover');
-var modal = document.getElementById("modal");
-const product = document.querySelectorAll('.product__information');
 
-for (i = 0; i < logo.length; i++)
+
+var modal = document.getElementById("modal");
+const slide = document.querySelectorAll('.header_product-wrap');
+const product = document.querySelectorAll('.contain_product-information')
+for (let i=0; i<slide.length;i++)
 {
-    logo[i].onmouseover = function() {
-        modal.style.display = "block";
+    if(slide[i])
+    {
+        slide[i].onmouseover = function() {
+            product[i].classList.add("active");
+            modal.classList.add("open");
+
+    }
     };
-    logo[i].onmouseout = function() {
-        modal.style.display = "none";
+    slide[i].onmouseout = function() {
+        product[i].classList.remove("active");
     };
+    if(!silde[i] || !product[i])
+    {
+        modal.classList.remove("open");
+
+    }
 }
 
-// for (i = 0; i < logo.length; i++)
-// {
-//     logo[i].onmouseover = function() {
-//         product.style.animation = 
-//     }
-// }
-// const product = document.querySelectorAll('.product__information');
-
-// BUTTON NEXT PREVIOUS BANNER 
-// var btn_next = document.getElementsByClassName('btn__next');
-// var banner = document.getElementsByClassName('banner');
-// var btn_previous = document.getElementsByClassName('btn__previous');
-
-// banner.onmouseover = function() {
-//     btn_next.style.display = "block";
-// };

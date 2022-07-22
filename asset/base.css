@@ -13,11 +13,12 @@ html {
     font-size: 62.5%;
     line-height: 1.6 rem;
     font-family: 'Roboto', sans-serif;
+    /* font-family: inherit; */
     box-sizing: border-box;
 }
 
 .grid {
-    width: 1800px;
+    width: 1440px;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -38,7 +39,12 @@ html {
     margin-left: 0px;
     margin-right: 0px;
 }
-
+.grid__column-12 {
+    width: 8.333333%;
+}
+.grid__column-11 {
+    width: 91.66667%;
+}
 .grid__column-6 {
     width: 50%;
     padding-left:0px;
@@ -64,6 +70,7 @@ html {
     right: 0;
     left: 0;
     bottom: 0;
+    z-index: 0;
 }
 
 .modal__overlay {
